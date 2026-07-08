@@ -1,0 +1,36 @@
+{
+  "taxes": [
+    {
+      "code": "IVA13",
+      "name": "IVA 13%",
+      "type": "percentage",
+      "rate": 0.13,
+      "included": false,
+      "rounding": "half_up"
+    },
+    {
+      "code": "IVA16",
+      "name": "IVA 16%",
+      "type": "percentage",
+      "rate": 0.16,
+      "included": false,
+      "rounding": "half_up"
+    },
+    {
+      "code": "EXENTO",
+      "name": "Exento",
+      "type": "percentage",
+      "rate": 0.0,
+      "included": false,
+      "rounding": "half_up"
+    },
+    {
+      "code": "PROPINA",
+      "name": "Propina fija",
+      "type": "fixed",
+      "rate": 5.00,
+      "included": false,
+      "rounding": "half_up"
+    }
+  ]
+}

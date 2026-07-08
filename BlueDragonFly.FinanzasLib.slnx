@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BlueDragonFly.FinanzasLib.Core/BlueDragonFly.FinanzasLib.Core.csproj" />
+  <Project Path="BlueDragonFly.FinanzasLib.Demo/BlueDragonFly.FinanzasLib.Demo.csproj" />
+  <Project Path="BlueDragonFly.FinanzasLib.Tests/BlueDragonFly.FinanzasLib.Tests.csproj" />
+</Solution>
