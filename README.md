@@ -1,8 +1,16 @@
 # BlueDragonFly.FinanzasLib
 
+[![Licencia: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4.svg)](https://dotnet.microsoft.com/)
+
 Biblioteca .NET para realizar cálculos monetarios con **exactitud decimal**.
 
 En lugar de depender de `float` o `double`, todas las operaciones se ejecutan internamente sobre **centavos** (`long`), eliminando los errores de redondeo propios de la aritmética de punto flotante.
+
+- [Core.md](docs/Core.md) — guía de uso detallada con todos los ejemplos
+- [Architecture.md](docs/Architecture.md) — diseño técnico y referencia de namespaces
+- [Changelog.md](docs/Changelog.md) — historial de versiones
+- [LICENSE](LICENSE) — MIT License
 
 ## Características
 
