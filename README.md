@@ -1,0 +1,2 @@
+# BlueDragonFly.FinanzasLib
+LIB
