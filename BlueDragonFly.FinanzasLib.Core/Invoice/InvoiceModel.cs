@@ -30,6 +30,14 @@ public sealed class InvoiceModel
     /// </summary>
     public IReadOnlyList<Retention> Retentions { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="InvoiceModel"/>.
+    /// </summary>
+    /// <param name="number">Número de factura.</param>
+    /// <param name="date">Fecha de emisión.</param>
+    /// <param name="lines">Líneas de la factura.</param>
+    /// <param name="globalDiscounts">Descuentos globales aplicados al subtotal.</param>
+    /// <param name="retentions">Retenciones aplicadas al total.</param>
     public InvoiceModel(
         string number,
         DateTime date,

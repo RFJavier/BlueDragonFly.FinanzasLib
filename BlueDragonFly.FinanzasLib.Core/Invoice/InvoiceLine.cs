@@ -35,6 +35,15 @@ public sealed class InvoiceLine
     /// </summary>
     public IReadOnlyList<string> TaxCodes { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="InvoiceLine"/>.
+    /// </summary>
+    /// <param name="description">Descripción del ítem.</param>
+    /// <param name="quantity">Cantidad de ítems.</param>
+    /// <param name="unitPrice">Precio unitario.</param>
+    /// <param name="discounts">Descuentos aplicados a la línea.</param>
+    /// <param name="taxCodes">Códigos de impuestos a aplicar.</param>
+    /// <param name="itemCode">Código del ítem.</param>
     public InvoiceLine(
         string description,
         long quantity,

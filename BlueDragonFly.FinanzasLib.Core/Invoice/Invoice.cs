@@ -60,6 +60,20 @@ public sealed class Invoice
     /// </summary>
     public Money Total { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="Invoice"/>.
+    /// </summary>
+    /// <param name="number">Número de factura.</param>
+    /// <param name="date">Fecha de emisión.</param>
+    /// <param name="lines">Líneas calculadas.</param>
+    /// <param name="subTotal">Suma de montos brutos de todas las líneas.</param>
+    /// <param name="lineDiscounts">Suma de descuentos de línea.</param>
+    /// <param name="subTotalNet">Subtotal menos descuentos de línea.</param>
+    /// <param name="globalDiscounts">Suma de descuentos globales.</param>
+    /// <param name="taxableAmount">Monto gravable.</param>
+    /// <param name="totalTaxes">Suma de todos los impuestos no incluidos.</param>
+    /// <param name="totalRetentions">Suma de todas las retenciones.</param>
+    /// <param name="total">Total a pagar.</param>
     public Invoice(
         string number,
         DateTime date,

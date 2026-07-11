@@ -25,6 +25,11 @@ public sealed class TaxCalculation
     /// </summary>
     public Money GrandTotal => Details.Aggregate(BaseAmount, (acc, d) => d.Included ? acc : acc + d.TaxAmount);
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="TaxCalculation"/>.
+    /// </summary>
+    /// <param name="baseAmount">Monto base original.</param>
+    /// <param name="details">Desglose de cada impuesto aplicado.</param>
     public TaxCalculation(Money baseAmount, IEnumerable<TaxResult> details)
     {
         BaseAmount = baseAmount;

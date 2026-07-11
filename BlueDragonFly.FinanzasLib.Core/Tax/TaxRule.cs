@@ -37,6 +37,15 @@ public sealed class TaxRule
     /// </summary>
     public RoundingMode Rounding { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="TaxRule"/>.
+    /// </summary>
+    /// <param name="code">Código único del impuesto.</param>
+    /// <param name="name">Nombre descriptivo del impuesto.</param>
+    /// <param name="type">Tipo de impuesto.</param>
+    /// <param name="rate">Tasa o monto del impuesto.</param>
+    /// <param name="included">Indica si el impuesto está incluido en el monto base.</param>
+    /// <param name="rounding">Modo de redondeo. Por defecto <see cref="RoundingMode.HalfUp"/>.</param>
     public TaxRule(string code, string name, TaxType type, decimal rate, bool included = false, RoundingMode rounding = RoundingMode.HalfUp)
     {
         if (string.IsNullOrWhiteSpace(code))

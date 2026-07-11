@@ -35,6 +35,15 @@ public sealed class InvoiceLineResult
     /// </summary>
     public Money Total { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="InvoiceLineResult"/>.
+    /// </summary>
+    /// <param name="input">Línea de entrada.</param>
+    /// <param name="grossAmount">Monto bruto.</param>
+    /// <param name="discountAmount">Total de descuentos aplicados a la línea.</param>
+    /// <param name="netAmount">Monto neto después de descuentos.</param>
+    /// <param name="taxes">Impuestos calculados sobre el monto neto.</param>
+    /// <param name="total">Total de la línea.</param>
     public InvoiceLineResult(
         InvoiceLine input,
         Money grossAmount,

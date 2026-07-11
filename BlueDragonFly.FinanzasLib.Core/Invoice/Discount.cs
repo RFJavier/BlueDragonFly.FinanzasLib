@@ -32,6 +32,14 @@ public sealed class Discount
     /// </summary>
     public RoundingMode Rounding { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="Discount"/>.
+    /// </summary>
+    /// <param name="name">Nombre descriptivo del descuento.</param>
+    /// <param name="type">Tipo de descuento.</param>
+    /// <param name="value">Valor del descuento.</param>
+    /// <param name="code">Código opcional del descuento.</param>
+    /// <param name="rounding">Modo de redondeo. Por defecto <see cref="RoundingMode.HalfUp"/>.</param>
     public Discount(string name, DiscountType type, decimal value, string? code = null, RoundingMode rounding = RoundingMode.HalfUp)
     {
         if (string.IsNullOrWhiteSpace(name))

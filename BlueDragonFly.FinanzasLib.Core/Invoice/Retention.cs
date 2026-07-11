@@ -32,6 +32,14 @@ public sealed class Retention
     /// </summary>
     public RoundingMode Rounding { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="Retention"/>.
+    /// </summary>
+    /// <param name="name">Nombre descriptivo de la retención.</param>
+    /// <param name="type">Tipo de retención.</param>
+    /// <param name="value">Valor de la retención.</param>
+    /// <param name="code">Código opcional de la retención.</param>
+    /// <param name="rounding">Modo de redondeo. Por defecto <see cref="RoundingMode.HalfUp"/>.</param>
     public Retention(string name, RetentionType type, decimal value, string? code = null, RoundingMode rounding = RoundingMode.HalfUp)
     {
         if (string.IsNullOrWhiteSpace(name))

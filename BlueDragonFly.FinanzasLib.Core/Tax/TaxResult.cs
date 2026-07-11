@@ -30,6 +30,14 @@ public sealed class TaxResult
     /// </summary>
     public bool Included { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="TaxResult"/>.
+    /// </summary>
+    /// <param name="code">Código del impuesto aplicado.</param>
+    /// <param name="name">Nombre del impuesto aplicado.</param>
+    /// <param name="baseAmount">Monto base sobre el que se calculó el impuesto.</param>
+    /// <param name="taxAmount">Monto del impuesto calculado.</param>
+    /// <param name="included">Indica si el impuesto estaba incluido en el monto base.</param>
     public TaxResult(string code, string name, Money baseAmount, Money taxAmount, bool included)
     {
         Code = code;

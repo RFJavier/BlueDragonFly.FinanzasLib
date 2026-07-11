@@ -152,28 +152,86 @@ public readonly record struct Money : IComparable<Money>, IComparable
 
     #region Operators
 
+    /// <summary>
+    /// Suma dos cantidades monetarias.
+    /// </summary>
     public static Money operator +(Money left, Money right) => Add(left, right);
+
+    /// <summary>
+    /// Resta dos cantidades monetarias.
+    /// </summary>
     public static Money operator -(Money left, Money right) => Subtract(left, right);
+
+    /// <summary>
+    /// Multiplica una cantidad monetaria por un factor decimal.
+    /// </summary>
     public static Money operator *(Money money, decimal factor) => Multiply(money, factor);
+
+    /// <summary>
+    /// Multiplica un factor decimal por una cantidad monetaria.
+    /// </summary>
     public static Money operator *(decimal factor, Money money) => Multiply(money, factor);
+
+    /// <summary>
+    /// Multiplica una cantidad monetaria por un factor entero.
+    /// </summary>
     public static Money operator *(Money money, long factor) => Multiply(money, factor);
+
+    /// <summary>
+    /// Multiplica un factor entero por una cantidad monetaria.
+    /// </summary>
     public static Money operator *(long factor, Money money) => Multiply(money, factor);
+
+    /// <summary>
+    /// Divide una cantidad monetaria por un divisor decimal.
+    /// </summary>
     public static Money operator /(Money money, decimal divisor) => Divide(money, divisor);
+
+    /// <summary>
+    /// Divide una cantidad monetaria por un divisor entero.
+    /// </summary>
     public static Money operator /(Money money, long divisor) => Divide(money, divisor);
+
+    /// <summary>
+    /// Indica si la primera cantidad es menor que la segunda.
+    /// </summary>
     public static bool operator <(Money left, Money right) => left.Cents < right.Cents;
+
+    /// <summary>
+    /// Indica si la primera cantidad es mayor que la segunda.
+    /// </summary>
     public static bool operator >(Money left, Money right) => left.Cents > right.Cents;
+
+    /// <summary>
+    /// Indica si la primera cantidad es menor o igual que la segunda.
+    /// </summary>
     public static bool operator <=(Money left, Money right) => left.Cents <= right.Cents;
+
+    /// <summary>
+    /// Indica si la primera cantidad es mayor o igual que la segunda.
+    /// </summary>
     public static bool operator >=(Money left, Money right) => left.Cents >= right.Cents;
 
     #endregion
 
     #region Comparisons
 
+    /// <summary>
+    /// Compara esta instancia con otra cantidad monetaria.
+    /// </summary>
+    /// <param name="other">Otra cantidad monetaria.</param>
+    /// <returns>Un valor menor que cero si esta instancia es menor, cero si son iguales, o mayor que cero si es mayor.</returns>
     public int CompareTo(Money other)
     {
         return Cents.CompareTo(other.Cents);
     }
 
+    /// <summary>
+    /// Compara esta instancia con otro objeto.
+    /// </summary>
+    /// <param name="obj">Objeto a comparar.</param>
+    /// <returns>Un valor menor que cero si esta instancia es menor, cero si son iguales, o mayor que cero si es mayor.</returns>
+    /// <exception cref="ArgumentException">Se produce cuando <paramref name="obj"/> no es de tipo <see cref="Money"/>.</exception>
     public int CompareTo(object? obj)
     {
         if (obj is null)
