@@ -5,6 +5,35 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PackageId>BlueDragonFly.FinanzasLib.Core</PackageId>
+
+    <Version>1.0.1</Version>
+
+    <Authors>Javier Rivera</Authors>
+
+    <Company>BlueDragonFly</Company>
+
+    <Description>Financial calculation library for .NET applications.</Description>
+
+    <PackageTags>finance;money;invoice;tax;dotnet;csharp</PackageTags>
+
+    <PackageProjectUrl>https://github.com/RFJavier/BlueDragonFly.FinanzasLib</PackageProjectUrl>
+
+    <RepositoryUrl>https://github.com/RFJavier/BlueDragonFly.FinanzasLib</RepositoryUrl>
+
+    <RepositoryType>git</RepositoryType>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <PackageReleaseNotes>
+      Initial stable release.
+    </PackageReleaseNotes>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
